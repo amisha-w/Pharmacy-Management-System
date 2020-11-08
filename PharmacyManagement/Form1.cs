@@ -24,6 +24,7 @@ namespace PharmacyManagement
             {
                 timer1.Stop();
                 Main main_page = new Main();
+                //main_page.Closed += (s, args) => this.Close();
                 main_page.Show();
                 this.Hide();
             }
