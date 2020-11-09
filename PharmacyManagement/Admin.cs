@@ -11,6 +11,7 @@ using MySql.Data.MySqlClient;
 
 namespace PharmacyManagement
 {
+    
     public partial class Admin : Form
     {
         public Admin()
@@ -83,4 +84,5 @@ namespace PharmacyManagement
             }
         }
     }
+    
 }

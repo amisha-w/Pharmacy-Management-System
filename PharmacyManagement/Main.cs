@@ -67,13 +67,17 @@ namespace PharmacyManagement
                         Form form = null;
                         if(unameTxt.Text.Equals("admin"))
                         {
+                            PharmacyManagement.User.admin = 1;
                             form = new Home(1);
                         }
                         else
                         {
+                            PharmacyManagement.User.admin = 0;
                             form = new Home(0);
-                        } 
-                            form.Closed += (s, args) => this.Close();
+                        }
+                        PharmacyManagement.User.username = unameTxt.Text;
+                        PharmacyManagement.User.password = passTxt.Text;
+                        form.Closed += (s, args) => this.Close();
                             form.ShowDialog();
                             username_matched = true;
                             this.Close();
@@ -92,6 +96,19 @@ namespace PharmacyManagement
 
             }
 
+        }
+    }
+    public static class User
+    {
+        public static int admin = 0;
+        public static string username { get; set; }
+        public static string password { get; set; }
+
+        public static bool isAdmin()
+        {
+            if (admin == 1)
+                return true;
+            return false;
         }
     }
 }

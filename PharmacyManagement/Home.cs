@@ -17,7 +17,7 @@ namespace PharmacyManagement
         {
             InitializeComponent();
             this.admin = admin;
-            if(admin==0)
+            if(!PharmacyManagement.User.isAdmin())
             {
                 adminBtn.Visible = false;
             }
@@ -64,7 +64,7 @@ namespace PharmacyManagement
 
         private void adminBtn_Click(object sender, EventArgs e)
         {
-            if(admin==1)
+            if(User.isAdmin())
             {
                 new Admin().Show();
                 this.Hide();
