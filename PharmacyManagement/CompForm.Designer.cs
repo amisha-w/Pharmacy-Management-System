@@ -186,7 +186,7 @@
             this.id.Margin = new System.Windows.Forms.Padding(4);
             this.id.Name = "id";
             this.id.PasswordChar = '\0';
-            this.id.PlaceholderText = "Employee Id";
+            this.id.PlaceholderText = "Company Id";
             this.id.SelectedText = "";
             this.id.ShadowDecoration.Parent = this.id;
             this.id.Size = new System.Drawing.Size(170, 45);
