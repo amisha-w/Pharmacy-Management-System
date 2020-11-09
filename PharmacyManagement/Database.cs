@@ -36,6 +36,7 @@ namespace PharmacyManagement
             catch (Exception e)
             {
                 dataReader = null;
+                MessageBox.Show("Read Error!");
                 Debug.WriteLine("DB Read Exception: " + e);
             }
             return dataReader;
@@ -128,6 +129,33 @@ namespace PharmacyManagement
             return RowsAffected;
         }
 
+        public static int AddUser(int update, string username, string password)
+        {
+            MySqlConnection conn = Connection();
+            MySqlCommand query = conn.CreateCommand();
+            if (update == 0)
+                query.CommandText = " INSERT INTO `phmanagement_users` VALUES(@username, @password) ";
+            else
+                query.CommandText = " UPDATE `phmanagement_users` SET `password`=@password   WHERE `phmanagement_users`.`username`=@username ";
+
+            query.Parameters.AddWithValue("@username", username);
+            query.Parameters.AddWithValue("@password", password);
+            int RowsAffected = -1;
+            try
+            {
+                conn.Open();
+                RowsAffected = query.ExecuteNonQuery();
+                //conn.Close();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Exception " + e);
+                MessageBox.Show("Update error" + e);
+            }
+            return RowsAffected;
+        }
+
+
         public static void DeleteMed(string mname)
         {
             MySqlConnection connection = Connection();
@@ -168,6 +196,24 @@ namespace PharmacyManagement
             MySqlCommand query = connection.CreateCommand();
             query.CommandText = "DELETE from `phmanagement_comp` WHERE `comp_id`=@comp_id ";
             query.Parameters.AddWithValue("@comp_id", id);
+            try
+            {
+                connection.Open();
+                query.ExecuteNonQuery();
+                //connection.Close();
+            }
+            catch (Exception e)
+            {
+                Debug.WriteLine("Exception: " + e);
+            }
+        }
+
+        public static void DeleteUser(string username)
+        {
+            MySqlConnection connection = Connection();
+            MySqlCommand query = connection.CreateCommand();
+            query.CommandText = "DELETE from `phmanagement_users` WHERE `username`=@username ";
+            query.Parameters.AddWithValue("@username", username);
             try
             {
                 connection.Open();

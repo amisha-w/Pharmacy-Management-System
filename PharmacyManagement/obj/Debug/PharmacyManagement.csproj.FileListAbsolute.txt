@@ -102,3 +102,4 @@ C:\Users\Amisha\Documents\#SEM7\C#.NET\Miniproject - Pharmacy Management System\
 C:\Users\Amisha\Documents\#SEM7\C#.NET\Miniproject - Pharmacy Management System\PharmacyManagement\PharmacyManagement\obj\Debug\PharmacyManagement.CompForm.resources
 C:\Users\Amisha\Documents\#SEM7\C#.NET\Miniproject - Pharmacy Management System\PharmacyManagement\PharmacyManagement\obj\Debug\PharmacyManagement.Home.resources
 C:\Users\Amisha\Documents\#SEM7\C#.NET\Miniproject - Pharmacy Management System\PharmacyManagement\PharmacyManagement\obj\Debug\PharmacyManagement.Bill.resources
+C:\Users\Amisha\Documents\#SEM7\C#.NET\Miniproject - Pharmacy Management System\PharmacyManagement\PharmacyManagement\obj\Debug\PharmacyManagement.Admin.resources

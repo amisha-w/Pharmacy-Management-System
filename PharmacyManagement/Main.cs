@@ -64,7 +64,15 @@ namespace PharmacyManagement
                         {
                             this.Hide();
                             MessageBox.Show("Login Successful.", "Logged in", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                            var form = new Home();
+                        Form form = null;
+                        if(unameTxt.Text.Equals("admin"))
+                        {
+                            form = new Home(1);
+                        }
+                        else
+                        {
+                            form = new Home(0);
+                        } 
                             form.Closed += (s, args) => this.Close();
                             form.ShowDialog();
                             username_matched = true;

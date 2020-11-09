@@ -12,6 +12,17 @@ namespace PharmacyManagement
 {
     public partial class Home : Form
     {
+        int admin = 0;
+        public Home(int admin)
+        {
+            InitializeComponent();
+            this.admin = admin;
+            if(admin==0)
+            {
+                adminBtn.Visible = false;
+            }
+        }
+
         public Home()
         {
             InitializeComponent();
@@ -49,6 +60,16 @@ namespace PharmacyManagement
         private void exitBtn_Click(object sender, EventArgs e)
         {
             Environment.Exit(0);
+        }
+
+        private void adminBtn_Click(object sender, EventArgs e)
+        {
+            if(admin==1)
+            {
+                new Admin().Show();
+                this.Hide();
+                
+            }
         }
     }
 }

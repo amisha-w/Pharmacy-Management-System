@@ -39,6 +39,7 @@
             this.label4 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.exitBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.adminBtn = new Guna.UI2.WinForms.Guna2Button();
             this.SuspendLayout();
             // 
             // empBtn
@@ -163,7 +164,7 @@
             this.label5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.label5.Font = new System.Drawing.Font("Palatino Linotype", 19.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label5.ForeColor = System.Drawing.SystemColors.ControlLightLight;
-            this.label5.Location = new System.Drawing.Point(168, 29);
+            this.label5.Location = new System.Drawing.Point(211, 29);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(364, 45);
             this.label5.TabIndex = 21;
@@ -185,12 +186,29 @@
             this.exitBtn.Text = "Exit";
             this.exitBtn.Click += new System.EventHandler(this.exitBtn_Click);
             // 
+            // adminBtn
+            // 
+            this.adminBtn.CheckedState.Parent = this.adminBtn;
+            this.adminBtn.CustomImages.Parent = this.adminBtn;
+            this.adminBtn.FillColor = System.Drawing.Color.Black;
+            this.adminBtn.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.adminBtn.ForeColor = System.Drawing.Color.White;
+            this.adminBtn.HoverState.Parent = this.adminBtn;
+            this.adminBtn.Location = new System.Drawing.Point(23, 29);
+            this.adminBtn.Name = "adminBtn";
+            this.adminBtn.ShadowDecoration.Parent = this.adminBtn;
+            this.adminBtn.Size = new System.Drawing.Size(136, 45);
+            this.adminBtn.TabIndex = 23;
+            this.adminBtn.Text = "Manage Users";
+            this.adminBtn.Click += new System.EventHandler(this.adminBtn_Click);
+            // 
             // Home
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(782, 536);
+            this.Controls.Add(this.adminBtn);
             this.Controls.Add(this.exitBtn);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.label4);
@@ -223,5 +241,6 @@
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label5;
         private Guna.UI2.WinForms.Guna2Button exitBtn;
+        private Guna.UI2.WinForms.Guna2Button adminBtn;
     }
 }
