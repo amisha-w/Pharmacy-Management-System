@@ -47,9 +47,13 @@ namespace PharmacyManagement
 
         private void deleteBtn_Click(object sender, EventArgs e)
         {
-            if (username.Text == "")
+            if (username.Text == "" )
             {
                 MessageBox.Show("Please enter Username.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            else if (username.Text == "admin")
+            {
+                MessageBox.Show("Cannot delete Admin!", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else
             {

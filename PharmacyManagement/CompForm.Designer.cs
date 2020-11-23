@@ -41,6 +41,7 @@
             this.datagrid = new Guna.UI2.WinForms.Guna2DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.address = new System.Windows.Forms.RichTextBox();
+            this.exportBtn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -278,12 +279,29 @@
             this.address.Enter += new System.EventHandler(this.add_enter);
             this.address.Leave += new System.EventHandler(this.add_leave);
             // 
+            // exportBtn
+            // 
+            this.exportBtn.CheckedState.Parent = this.exportBtn;
+            this.exportBtn.CustomImages.Parent = this.exportBtn;
+            this.exportBtn.FillColor = System.Drawing.Color.Black;
+            this.exportBtn.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.exportBtn.ForeColor = System.Drawing.Color.White;
+            this.exportBtn.HoverState.Parent = this.exportBtn;
+            this.exportBtn.Location = new System.Drawing.Point(887, 40);
+            this.exportBtn.Name = "exportBtn";
+            this.exportBtn.ShadowDecoration.Parent = this.exportBtn;
+            this.exportBtn.Size = new System.Drawing.Size(88, 45);
+            this.exportBtn.TabIndex = 39;
+            this.exportBtn.Text = "Export";
+            this.exportBtn.Click += new System.EventHandler(this.exportBtn_Click);
+            // 
             // CompForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(1128, 539);
+            this.Controls.Add(this.exportBtn);
             this.Controls.Add(this.address);
             this.Controls.Add(this.homeBtn);
             this.Controls.Add(this.deleteBtn);
@@ -316,5 +334,6 @@
         private Guna.UI2.WinForms.Guna2DataGridView datagrid;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.RichTextBox address;
+        private Guna.UI2.WinForms.Guna2Button exportBtn;
     }
 }

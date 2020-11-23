@@ -53,6 +53,7 @@
             this.printPreviewDialog1 = new System.Windows.Forms.PrintPreviewDialog();
             this.printDocument1 = new System.Drawing.Printing.PrintDocument();
             this.homeBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.exportBtn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -225,7 +226,7 @@
             this.addBtn.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.addBtn.ForeColor = System.Drawing.Color.White;
             this.addBtn.HoverState.Parent = this.addBtn;
-            this.addBtn.Location = new System.Drawing.Point(93, 457);
+            this.addBtn.Location = new System.Drawing.Point(43, 457);
             this.addBtn.Name = "addBtn";
             this.addBtn.ShadowDecoration.Parent = this.addBtn;
             this.addBtn.Size = new System.Drawing.Size(108, 45);
@@ -319,7 +320,7 @@
             this.printBtn.Font = new System.Drawing.Font("Segoe UI", 10F);
             this.printBtn.ForeColor = System.Drawing.Color.White;
             this.printBtn.HoverState.Parent = this.printBtn;
-            this.printBtn.Location = new System.Drawing.Point(214, 457);
+            this.printBtn.Location = new System.Drawing.Point(179, 457);
             this.printBtn.Name = "printBtn";
             this.printBtn.ShadowDecoration.Parent = this.printBtn;
             this.printBtn.Size = new System.Drawing.Size(108, 45);
@@ -357,12 +358,29 @@
             this.homeBtn.Text = "Home";
             this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
             // 
+            // exportBtn
+            // 
+            this.exportBtn.CheckedState.Parent = this.exportBtn;
+            this.exportBtn.CustomImages.Parent = this.exportBtn;
+            this.exportBtn.FillColor = System.Drawing.Color.Black;
+            this.exportBtn.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.exportBtn.ForeColor = System.Drawing.Color.White;
+            this.exportBtn.HoverState.Parent = this.exportBtn;
+            this.exportBtn.Location = new System.Drawing.Point(313, 457);
+            this.exportBtn.Name = "exportBtn";
+            this.exportBtn.ShadowDecoration.Parent = this.exportBtn;
+            this.exportBtn.Size = new System.Drawing.Size(108, 45);
+            this.exportBtn.TabIndex = 38;
+            this.exportBtn.Text = "Export";
+            this.exportBtn.Click += new System.EventHandler(this.exportBtn_Click);
+            // 
             // Bill
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(935, 615);
+            this.Controls.Add(this.exportBtn);
             this.Controls.Add(this.homeBtn);
             this.Controls.Add(this.printBtn);
             this.Controls.Add(this.tCost);
@@ -411,5 +429,6 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog1;
         private System.Drawing.Printing.PrintDocument printDocument1;
         private Guna.UI2.WinForms.Guna2Button homeBtn;
+        private Guna.UI2.WinForms.Guna2Button exportBtn;
     }
 }

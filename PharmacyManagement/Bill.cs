@@ -68,6 +68,33 @@ namespace PharmacyManagement
             this.Close();
         }
 
+        private void exportBtn_Click(object sender, EventArgs e)
+        {
+            Microsoft.Office.Interop.Excel._Application app = new Microsoft.Office.Interop.Excel.Application();
+            Microsoft.Office.Interop.Excel._Workbook workbook = app.Workbooks.Add(Type.Missing);
+            Microsoft.Office.Interop.Excel._Worksheet worksheet = null;
+            app.Visible = true;
+            worksheet = workbook.Sheets["Sheet1"];
+            worksheet = workbook.ActiveSheet;
+            worksheet.Name = "Pharmacy_Bill";
+
+            for (int i = 1; i < datagrid.Columns.Count + 1; i++)
+            {
+                worksheet.Cells[1, i] = datagrid.Columns[i - 1].HeaderText;
+            }
+            for (int i = 0; i < datagrid.Rows.Count - 1; i++)
+            {
+                for (int j = 0; j < datagrid.Columns.Count; j++)
+                {
+                    worksheet.Cells[i + 2, j + 1] = datagrid.Rows[i].Cells[j].Value.ToString();
+                }
+            }
+            workbook.SaveAs("Bill.xls", Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Microsoft.Office.Interop.Excel.XlSaveAsAccessMode.xlExclusive, Type.Missing, Type.Missing, Type.Missing, Type.Missing);
+            app.Quit();
+            MessageBox.Show("Exported as Bill.xls", "Export Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+        }
+
         private void addBtn_Click(object sender, EventArgs e)
         {
             if(quantity.Text=="" || Int32.Parse(quantity.Text)>Int32.Parse(med.SelectedValue.ToString()))

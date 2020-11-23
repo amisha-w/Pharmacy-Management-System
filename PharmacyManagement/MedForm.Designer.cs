@@ -43,6 +43,7 @@
             this.updateBtn = new Guna.UI2.WinForms.Guna2Button();
             this.deleteBtn = new Guna.UI2.WinForms.Guna2Button();
             this.homeBtn = new Guna.UI2.WinForms.Guna2Button();
+            this.exportBtn = new Guna.UI2.WinForms.Guna2Button();
             ((System.ComponentModel.ISupportInitialize)(this.datagrid)).BeginInit();
             this.SuspendLayout();
             // 
@@ -331,12 +332,29 @@
             this.homeBtn.Text = "Home";
             this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
             // 
+            // exportBtn
+            // 
+            this.exportBtn.CheckedState.Parent = this.exportBtn;
+            this.exportBtn.CustomImages.Parent = this.exportBtn;
+            this.exportBtn.FillColor = System.Drawing.Color.Black;
+            this.exportBtn.Font = new System.Drawing.Font("Segoe UI", 10F);
+            this.exportBtn.ForeColor = System.Drawing.Color.White;
+            this.exportBtn.HoverState.Parent = this.exportBtn;
+            this.exportBtn.Location = new System.Drawing.Point(906, 26);
+            this.exportBtn.Name = "exportBtn";
+            this.exportBtn.ShadowDecoration.Parent = this.exportBtn;
+            this.exportBtn.Size = new System.Drawing.Size(88, 45);
+            this.exportBtn.TabIndex = 40;
+            this.exportBtn.Text = "Export";
+            this.exportBtn.Click += new System.EventHandler(this.exportBtn_Click);
+            // 
             // MedForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(40)))), ((int)(((byte)(40)))), ((int)(((byte)(40)))));
             this.ClientSize = new System.Drawing.Size(1162, 539);
+            this.Controls.Add(this.exportBtn);
             this.Controls.Add(this.homeBtn);
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.updateBtn);
@@ -374,5 +392,6 @@
         private Guna.UI2.WinForms.Guna2Button updateBtn;
         private Guna.UI2.WinForms.Guna2Button deleteBtn;
         private Guna.UI2.WinForms.Guna2Button homeBtn;
+        private Guna.UI2.WinForms.Guna2Button exportBtn;
     }
 }
